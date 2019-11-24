@@ -10,8 +10,8 @@
 using namespace std;
 
 class Graph {
-// number of vertices
-int v;
+// vertex numbers
+int n;
 // pointer to an array containing the adjacency lists
 list<int> *adj;
 // graph builder
@@ -24,14 +24,13 @@ void add_edge(int v1, int v2);
 int get_out_degree(int v);
 // vertice if v2 is neighbor of v1
 bool there_neighbor(int v1, int v2);
-
 };
 
 Graph::Graph(int v){
         // assign the number of vertices
-        this->v = v;
+        this->n = v;
         // create lists
-        adj = new list<int>[v];
+        adj = new list<int>[n];
 }
 
 void Graph::add_edge(int v1, int v2){

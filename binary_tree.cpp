@@ -44,7 +44,6 @@ void setLeft(Knot* knot) {
 void setRight(Knot* knot) {
         right = knot;
 }
-
 };
 
 class Tree {
