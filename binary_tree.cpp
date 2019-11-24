@@ -17,7 +17,7 @@ class Knot {
 private:
 Knot *left, *right;
 int key;
-
+// Knot builder
 public:
 Knot(int key) {
         this->key = key;
@@ -94,8 +94,8 @@ void inOrder(Knot* knot) {
                 inOrder(knot->getRight());
         }
 }
-};
 
+};
 
 int main(int argc, char *argv[]) {
         Tree tree;
