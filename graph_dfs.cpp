@@ -19,9 +19,7 @@
 #include <stack>
 
 using namespace std;
-
 // interactive DFS search
-
 class Graph {
 // vertex numbers
 int n;
