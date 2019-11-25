@@ -2,7 +2,6 @@
    Em teoria dos grafos, uma lista de adjacência, estrutura de adjacência
    ou dicionário é a representação de todas arestas ou arcos de um grafo em uma lista.
  */
-
 #include <iostream>
 #include <list>
 #include <algorithm>
@@ -55,28 +54,24 @@ bool Graph::there_neighbor(int v1, int v2){
 int main(int argc, char *argv[]){
         // creating a 4-vertex graph
         Graph graph(4);
-
         // adding the edges
         graph.add_edge(0, 1);
         graph.add_edge(0, 3);
         graph.add_edge(1, 2);
         graph.add_edge(3, 1);
         graph.add_edge(3, 2);
-
         // showing degrees of output
         cout << "Grau de saida do vertice 1: " << graph.get_out_degree(1);
         cout << "\nGrau de saida do vertice 3: " << graph.get_out_degree(3);
-
         // checking for neighbors
         if(graph.there_neighbor(0, 1)) {
-                cout << "\n\n1 eh vizinho de 0 \n";
+                cout << "\n\n1 eh vizinho de 0\n";
         } else {
                 cout << "\n\n1 nao eh vizinho de 0\n";
         }
-
         // checking for neighbors
         if(graph.there_neighbor(0, 2)) {
-                cout << "2 eh vizinho de 0 \n";
+                cout << "2 eh vizinho de 0\n";
         } else {
                 cout << "2 nao eh vizinho de 0\n";
         }

@@ -14,7 +14,6 @@
    Assim, a linha v da matriz graph[][] representa o leque de saída do vértice v
    e a coluna w da matriz representa o leque de entrada do vértice w.
  */
-
 #include <iostream>
 
 using namespace std;

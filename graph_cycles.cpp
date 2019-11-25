@@ -5,7 +5,6 @@
 
    vk = v0  mas v0,  v1,  v2,  . . . ,  vk–1  são distintos dois a dois.
  */
-
 #include <iostream>
 #include <list>
 #include <algorithm>
@@ -104,7 +103,6 @@ bool Graph::have_cycle() {
 int main(int argc, char *argv[]){
         // creating a 8-vertex graph
         Graph graph(8);
-
         // adding the edges
         graph.add_edge(0, 1);
         graph.add_edge(0, 2);

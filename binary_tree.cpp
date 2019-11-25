@@ -7,7 +7,6 @@
    serem invertidas, dependendo da aplicação).
    O objetivo desta árvore é estruturar os dados de forma a permitir busca binária.
  */
-
 #include <iostream>
 
 using namespace std;
@@ -25,23 +24,23 @@ Knot(int key) {
         right = NULL;
 }
 
-int getkey() {
+int get_key() {
         return key;
 }
 
-Knot* getLeft() {
+Knot* get_left() {
         return left;
 }
 
-Knot* getRight() {
+Knot* get_right() {
         return right;
 }
 
-void setLeft(Knot* knot) {
+void set_left(Knot* knot) {
         left = knot;
 }
 
-void setRight(Knot* knot) {
+void set_right(Knot* knot) {
         right = knot;
 }
 };
@@ -60,37 +59,37 @@ void insert(int key) {
         if(root == NULL) {
                 root = new Knot(key);
         } else {
-                insertAux(root, key);
+                insert_aux(root, key);
         }
 }
 
-void insertAux(Knot* knot, int key) {
-        if(key< knot->getkey()) {
-                if(knot->getLeft() == NULL) {
+void insert_aux(Knot* knot, int key) {
+        if(key< knot->get_key()) {
+                if(knot->get_left() == NULL) {
                         Knot* new_knot = new Knot(key);
-                        knot->setLeft(new_knot);
+                        knot->set_left(new_knot);
                 } else {
-                        insertAux(knot->getLeft(), key);
+                        insert_aux(knot->get_left(), key);
                 }
-        } else if(key > knot->getkey()) {
-                if(knot->getRight() == NULL) {
+        } else if(key > knot->get_key()) {
+                if(knot->get_right() == NULL) {
                         Knot* new_knot = new Knot(key);
-                        knot->setRight(new_knot);
+                        knot->set_right(new_knot);
                 } else {
-                        insertAux(knot->getRight(), key);
+                        insert_aux(knot->get_right(), key);
                 }
         }
 }
 
-Knot* getRoot() {
+Knot* get_root() {
         return root;
 }
 
-void inOrder(Knot* knot) {
+void in_order(Knot* knot) {
         if(knot != NULL) {
-                inOrder(knot->getLeft());
-                cout << knot->getkey() << '\n';
-                inOrder(knot->getRight());
+                in_order(knot->get_left());
+                cout << knot->get_key() << '\n';
+                in_order(knot->get_right());
         }
 }
 
@@ -109,7 +108,7 @@ int main(int argc, char *argv[]) {
         tree.insert(3);
 
         cout << "Percorrendo em Ordem:" << '\n';
-        tree.inOrder(tree.getRoot());
+        tree.in_order(tree.get_root());
 
         return 0;
 }

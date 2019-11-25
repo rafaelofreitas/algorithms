@@ -12,7 +12,6 @@
    capacidade de examinar todo o espaço de estados
    encontrando a solução ótima, respectivamente.
  */
-
 #include <iostream>
 #include <list>
 #include <algorithm>
@@ -94,7 +93,6 @@ void Graph::dfs(int v) {
 int main(int argc, char *argv[]){
         // creating a 8-vertex graph
         Graph graph(8);
-
         // adding the edges
         graph.add_edge(0, 1);
         graph.add_edge(0, 2);

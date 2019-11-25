@@ -7,7 +7,7 @@
    (ou seja, visitados pela primeira vez).  Para fazer isso, o algoritmo usa uma
    fila (= queue) de vértices.  No começo de cada iteração, a fila contém vértices
    que já foram numerados mas têm vizinhos ainda não numerados.
-   
+
    O processo iterativo consiste no seguinte:
 
    enquanto a fila não estiver vazia
@@ -19,7 +19,6 @@
 
    No começo da primeira iteração, a fila contém o vértice v, com número 0, e nada mais.
  */
-
 #include <iostream>
 #include <list>
 #include <queue>
@@ -82,7 +81,7 @@ void Graph::bfs(int v) {
                         v = queue.front();
                         // remove from queue
                         queue.pop();
-                } else{
+                } else {
                         break;
                 }
         }
@@ -91,7 +90,6 @@ void Graph::bfs(int v) {
 int main(int argc, char *argv[]){
         // creating a 8-vertex graph
         Graph graph(8);
-
         // adding the edges
         graph.add_edge(0, 1);
         graph.add_edge(0, 2);
