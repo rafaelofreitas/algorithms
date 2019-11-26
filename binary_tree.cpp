@@ -92,7 +92,6 @@ void in_order(Knot* knot) {
                 in_order(knot->get_right());
         }
 }
-
 };
 
 int main(int argc, char *argv[]) {

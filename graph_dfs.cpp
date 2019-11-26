@@ -90,7 +90,7 @@ void Graph::dfs(int v) {
         }
 }
 
-int main(int argc, char *argv[]){
+int main(int argc, char *argv[]) {
         // creating a 8-vertex graph
         Graph graph(8);
         // adding the edges

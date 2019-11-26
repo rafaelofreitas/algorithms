@@ -53,19 +53,19 @@ int have_cycle(int graph[3][3]) {
         return 0;
 }
 
-int main(int argc, char *argv[]){
+int main(int argc, char *argv[]) {
         int graph[3][3] = {
                 {0, 0, 0},
                 {0, 0, 0},
                 {0, 0, 0}
         };
 
-        graph[0][1] =1;
-        graph[1][0] =1;
-        graph[1][2] =1;
-        graph[2][1] =1;
-        graph[0][2] =1;
-        graph[2][0] =1;
+        graph[0][1] = 1;
+        graph[1][0] = 1;
+        graph[1][2] = 1;
+        graph[2][1] = 1;
+        graph[0][2] = 1;
+        graph[2][0] = 1;
 
         if(have_cycle(graph)) {
                 cout << "O grafo tem ciclo!\n";
